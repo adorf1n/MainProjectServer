@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "main_page_sliders",
+  "info": {
+    "singularName": "main-page-slider",
+    "pluralName": "main-page-sliders",
+    "displayName": "MainPageSlider"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "bgimg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

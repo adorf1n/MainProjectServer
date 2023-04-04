@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catalogs",
+  "info": {
+    "singularName": "catalog",
+    "pluralName": "catalogs",
+    "displayName": "Catalog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "item_number": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "crossed_price": {
+      "type": "string",
+      "required": true
+    },
+    "field_popular": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "field_novelty": {
+      "type": "boolean",
+      "default": false
+    },
+    "field_inStock": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "field_25discount": {
+      "type": "boolean"
+    },
+    "filter_collection": {
+      "type": "enumeration",
+      "enum": [
+        "Amoricci Parati ",
+        "Emiliana Parati",
+        "Erismann"
+      ],
+      "required": true
+    },
+    "filter_material": {
+      "type": "enumeration",
+      "enum": [
+        "Paper",
+        "Vinyl",
+        "Non-woven",
+        "Textile"
+      ],
+      "required": true
+    },
+    "filter_color": {
+      "type": "enumeration",
+      "enum": [
+        "White",
+        "Green",
+        "Gray",
+        "Yellow",
+        "Blue",
+        "Purple"
+      ],
+      "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "catalogs"
+    }
+  }
+}
